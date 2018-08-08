@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+##########
+# Notice #
+##########
+
 """
 Lifesigns Engine: A Python-based text adventure game engine.
 Copyright (C) 2018 William Willis Whinn
