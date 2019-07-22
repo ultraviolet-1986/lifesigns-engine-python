@@ -75,7 +75,7 @@ class Firearm(object):
     def add_clip(self):
         """ Add another clip to the Inventory. """
         self.clips_remaining += 1
-        print("Your {0} now has {1} clip(s) remaining".format(
+        print("Your {0} now has {1} clip(s) remaining.\n".format(
             self.name, self.clips_remaining))
 
     def fire_at(self, target):
@@ -84,21 +84,29 @@ class Firearm(object):
             self.rounds_remaining -= 1
             target.remaining_health -= self.damage_inflicted
         else:
-            print("Your {0} needs to be reloaded".format(self.name))
+            print("Your {0} needs to be reloaded.\n".format(self.name))
 
     def reload(self):
         """ Reload the weapon and remove a clip from the Inventory. """
         if self.clips_remaining > 0:
             self.clips_remaining -= 1
             self.rounds_remaining = self.capacity
-            print("Your {0} now has {1} round(s) remaining".format(
-                self.name, self.rounds_remaining))
-            print("Your {0} now has {1} clips(s) remaining".format(
-                self.name, self.clips_remaining))
+            # print("Your {0} now has {1} round(s) remaining.\n".format(
+            #     self.name, self.rounds_remaining))
+            # print("Your {0} now has {1} clips(s) remaining.\n".format(
+            #     self.name, self.clips_remaining))
+            self.status()
         elif self.rounds_remaining > 0:
-            print("Your {0} still has {1} round(s) loaded".format(
+            print("Your {0} still has {1} round(s) loaded.\n".format(
                 self.name, self.rounds_remaining))
         else:
-            print("You have no remaining ammunition")
+            print("You have no remaining ammunition.\n")
+
+    def status(self):
+        """ Display the object's status. """
+        print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n".format(
+            self.name,
+            self.rounds_remaining,
+            self.clips_remaining))
 
 # End of File.
