@@ -6,7 +6,7 @@
 
 """
 Lifesigns Engine: A Python-based text adventure game engine.
-Copyright (C) 2018 William Willis Whinn
+Copyright (C) 2019 William Willis Whinn
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@ LIFESIGNS_METADATA_URL = 'https://github.com/ultraviolet-1986/lifesigns-engine-p
 
 def display_prompt():
     """ Display the main Lifesigns Engine header """
-    print("Lifesigns Engine v{} Copyright (C) 2018 William Whinn".
+    print("Lifesigns Engine v{} Copyright (C) 2019 William Whinn".
           format(LIFESIGNS_METADATA_VERSION))
     print(LIFESIGNS_METADATA_URL)
 

@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2018 William Willis Whinn
+# Copyright (C) 2019 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -75,7 +75,7 @@ class Firearm(object):
     def add_clip(self):
         """ Add another clip to the Inventory. """
         self.clips_remaining += 1
-        print("Your {} now has {} clip(s) remaining".format(
+        print("Your {0} now has {1} clip(s) remaining".format(
             self.name, self.clips_remaining))
 
     def fire_at(self, target):
@@ -84,19 +84,19 @@ class Firearm(object):
             self.rounds_remaining -= 1
             target.remaining_health -= self.damage_inflicted
         else:
-            print("Your {} needs to be reloaded".format(self.name))
+            print("Your {0} needs to be reloaded".format(self.name))
 
     def reload(self):
         """ Reload the weapon and remove a clip from the Inventory. """
         if self.clips_remaining > 0:
             self.clips_remaining -= 1
             self.rounds_remaining = self.capacity
-            print("Your {} now has {} round(s) remaining".format(
+            print("Your {0} now has {1} round(s) remaining".format(
                 self.name, self.rounds_remaining))
-            print("Your {} now has {} clips(s) remaining".format(
+            print("Your {0} now has {1} clips(s) remaining".format(
                 self.name, self.clips_remaining))
         elif self.rounds_remaining > 0:
-            print("Your {} still has {} round(s) loaded".format(
+            print("Your {0} still has {1} round(s) loaded".format(
                 self.name, self.rounds_remaining))
         else:
             print("You have no remaining ammunition")

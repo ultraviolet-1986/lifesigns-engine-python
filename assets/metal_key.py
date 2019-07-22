@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2018 William Willis Whinn
+# Copyright (C) 2019 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -57,16 +57,16 @@ class MetalKey(object):
         """ Repair the Metal Key if damaged, and allow use. """
         if not self.usable:
             self.usable = True
-            print("Your {} has been repaired".format(self.name))
+            print("Your {0} has been repaired".format(self.name))
         else:
-            print("Your {} does not need to be repaired".format(self.name))
+            print("Your {0} does not need to be repaired".format(self.name))
 
     def damage(self):
         """ Damage the Metal Key and prevent use. """
         if self.usable:
             self.usable = False
-            print("Your {} has been damaged".format(self.name))
+            print("Your {0} has been damaged".format(self.name))
         else:
-            print("Your {} is already damaged".format(self.name))
+            print("Your {0} is already damaged".format(self.name))
 
 # End of File.
