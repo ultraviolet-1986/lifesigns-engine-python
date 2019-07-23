@@ -36,7 +36,7 @@
         This is the name of the object.
     - description (String)
         This is a short description of the object.
-    - damage_inflicted (Integer)
+    - damage_potential (Integer)
         This value determines how powerful the weapon is.
     - capacity (Integer)
         This value holds the maximum bullet capacity of the object.
@@ -56,17 +56,17 @@ class Firearm(object):
     """ This object represents a Firearm such as a Handgun or Rifle (etc.) """
     name = ""
     description = ""
-    damage_inflicted = 0
+    damage_potential = 0
     capacity = 0
     rounds_remaining = 0
     clips_remaining = 0
     usable = False
 
-    def __init__(self, name, description, damage_inflicted, capacity,
+    def __init__(self, name, description, damage_potential, capacity,
                  rounds_remaining, clips_remaining, usable):
         self.name = name
         self.description = description
-        self.damage_inflicted = damage_inflicted
+        self.damage_potential = damage_potential
         self.capacity = capacity
         self.rounds_remaining = rounds_remaining
         self.clips_remaining = clips_remaining
@@ -82,7 +82,7 @@ class Firearm(object):
         """ Fire the weapon and deal damage to the target. """
         if self.rounds_remaining > 0:
             self.rounds_remaining -= 1
-            target.remaining_health -= self.damage_inflicted
+            target.remaining_health -= self.damage_potential
         else:
             print("Your {0} must be reloaded.\n".format(self.name))
 
