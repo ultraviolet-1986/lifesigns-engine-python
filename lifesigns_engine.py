@@ -60,9 +60,8 @@ LIFESIGNS_METADATA_URL = 'https://github.com/ultraviolet-1986/lifesigns-engine-p
 
 def display_prompt():
     """ Display the main Lifesigns Engine header """
-    print("Lifesigns Engine v{} Copyright (C) 2019 William Whinn".
-          format(LIFESIGNS_METADATA_VERSION))
-    print(LIFESIGNS_METADATA_URL)
+    print("Lifesigns Engine v{0} Copyright (C) 2019 William Whinn\n{1}\n".format(
+        LIFESIGNS_METADATA_VERSION, LIFESIGNS_METADATA_URL))
 
 #############
 # Kickstart #
