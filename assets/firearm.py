@@ -84,21 +84,16 @@ class Firearm(object):
             self.rounds_remaining -= 1
             target.remaining_health -= self.damage_inflicted
         else:
-            print("Your {0} needs to be reloaded.\n".format(self.name))
+            print("Your {0} must be reloaded.\n".format(self.name))
 
     def reload(self):
         """ Reload the weapon and remove a clip from the Inventory. """
         if self.clips_remaining > 0:
             self.clips_remaining -= 1
             self.rounds_remaining = self.capacity
-            # print("Your {0} now has {1} round(s) remaining.\n".format(
-            #     self.name, self.rounds_remaining))
-            # print("Your {0} now has {1} clips(s) remaining.\n".format(
-            #     self.name, self.clips_remaining))
             self.status()
         elif self.rounds_remaining > 0:
-            print("Your {0} still has {1} round(s) loaded.\n".format(
-                self.name, self.rounds_remaining))
+            self.status()
         else:
             print("You have no remaining ammunition.\n")
 
