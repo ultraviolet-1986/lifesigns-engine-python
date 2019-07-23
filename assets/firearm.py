@@ -60,7 +60,7 @@ class Firearm(object):
     capacity = 0
     rounds_remaining = 0
     clips_remaining = 0
-    usable = False
+    usable = True
 
     def __init__(self, name, description, damage_potential, capacity,
                  rounds_remaining, clips_remaining, usable):
