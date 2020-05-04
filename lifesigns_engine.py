@@ -32,20 +32,22 @@
 # Imports #
 ###########
 
-# Documents
-from assets.email import EMail
-from assets.journal import Journal
-from assets.sticky_note import StickyNote
+class Lifesigns():
+    def __init__():
+        # Documents
+        from assets.email import EMail
+        from assets.journal import Journal
+        from assets.sticky_note import StickyNote
 
-# Keys
-from assets.metal_key import MetalKey
-from assets.programmable_keycard import ProgrammableKeycard
+        # Keys
+        from assets.metal_key import MetalKey
+        from assets.programmable_keycard import ProgrammableKeycard
 
-# Weapons
-from assets.firearm import Firearm
+        # Weapons
+        from assets.firearm import Firearm
 
-# Containers
-from assets.inventory import Inventory
+        # Containers
+        from assets.inventory import Inventory
 
 #############
 # Variables #
