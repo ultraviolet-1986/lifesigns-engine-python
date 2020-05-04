@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@
 ###########
 
 class StickyNote(object):
-    """ This object represents a small paper Sticky Note. """
+    """This object represents a small paper Sticky Note."""
     name = ""
     description = ""
     contents = ""
@@ -54,14 +54,14 @@ class StickyNote(object):
         self.legible = legible
 
     def read(self):
-        """ Display the contents of the Sticky Note. """
+        """Display the contents of the Sticky Note."""
         if self.legible:
             print(self.contents)
         else:
             print("The note is illegible and cannot be read.")
 
     def damage(self):
-        """ Damage the Sticky Note. """
+        """Damage the Sticky Note."""
         if self.legible:
             self.legible = False
 

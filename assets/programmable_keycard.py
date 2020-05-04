@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@
 ###########
 
 class ProgrammableKeycard(object):
-    """ This object represents a Programmable Keycard. """
+    """This object represents a Programmable Keycard."""
     name = ""
     description = ""
     clearance_level = 0
@@ -54,7 +54,7 @@ class ProgrammableKeycard(object):
         self.active = active
 
     def activate(self):
-        """ Activate the Programmable Keycard for use on compatible locks. """
+        """Activate the Programmable Keycard for use on compatible locks."""
         if not self.active:
             self.active = True
             print("Your {0} has now been activated.".format(self.name))
@@ -62,7 +62,7 @@ class ProgrammableKeycard(object):
             print("Your {0} does not need to be activated.".format(self.name))
 
     def deactivate(self):
-        """ Deactivate the Programmable Keycard and prevent use. """
+        """Deactivate the Programmable Keycard and prevent use."""
         if self.active:
             self.active = False
             print("Your {0} has been deactivated.".format(self.name))

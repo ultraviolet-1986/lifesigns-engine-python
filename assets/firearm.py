@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -53,7 +53,7 @@
 ###########
 
 class Firearm(object):
-    """ This object represents a Firearm such as a Handgun or Rifle (etc.) """
+    """This object represents a Firearm such as a Handgun or Rifle (etc.)"""
     name = ""
     description = ""
     damage_potential = 0
@@ -73,13 +73,13 @@ class Firearm(object):
         self.usable = usable
 
     def add_clip(self):
-        """ Add another clip to the Inventory. """
+        """Add another clip to the Inventory."""
         self.clips_remaining += 1
         print("Your {0} now has {1} clip(s) remaining.\n".format(
             self.name, self.clips_remaining))
 
     def fire_at(self, target):
-        """ Fire the weapon and deal damage to the target. """
+        """Fire the weapon and deal damage to the target."""
         if self.rounds_remaining > 0:
             self.rounds_remaining -= 1
             target.remaining_health -= self.damage_potential
@@ -87,7 +87,7 @@ class Firearm(object):
             print("Your {0} must be reloaded.\n".format(self.name))
 
     def reload(self):
-        """ Reload the weapon and remove a clip from the Inventory. """
+        """Reload the weapon and remove a clip from the Inventory."""
         if self.clips_remaining > 0:
             self.clips_remaining -= 1
             self.rounds_remaining = self.capacity
@@ -98,7 +98,7 @@ class Firearm(object):
             print("You have no remaining ammunition.\n")
 
     def status(self):
-        """ Display the object's status. """
+        """Display the object's status."""
         print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n".format(
             self.name,
             self.rounds_remaining,

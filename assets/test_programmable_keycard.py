@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -46,15 +46,15 @@ TEST_KEY_CARD = ProgrammableKeycard(
 ##############
 
 class TestProgrammableKeycard(unittest.TestCase):
-    """ Unit tests for the ProgrammableKeycard object. """
+    """Unit tests for the ProgrammableKeycard object."""
 
     def test_card_active(self):
-        """ Test the activation of a Programmable Keycard. """
+        """Test the activation of a Programmable Keycard."""
         TEST_KEY_CARD.activate()
         self.assertTrue(TEST_KEY_CARD.active)
 
     def test_card_inactive(self):
-        """ Test the deactivation of a Programmable Keycard. """
+        """Test the deactivation of a Programmable Keycard."""
         TEST_KEY_CARD.deactivate()
         self.assertFalse(TEST_KEY_CARD.active)
 

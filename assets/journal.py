@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@
 ###########
 
 class Journal(object):
-    """ This object represents a multiple-paged paper Journal. """
+    """This object represents a multiple-paged paper Journal."""
     name = ""
     description = ""
     contents = []
@@ -54,13 +54,13 @@ class Journal(object):
         self.legible = legible
 
     def read(self):
-        """ Display the contents of the Journal. """
+        """Display the contents of the Journal."""
         print("{0}\n".format(self.name))
         for page in self.contents:
             print("{0}\n".format(page))
 
     def damage(self):
-        """ Damage the Journal. """
+        """Damage the Journal."""
         if self.legible:
             self.legible = False
 

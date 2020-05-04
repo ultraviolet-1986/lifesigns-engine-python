@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@ class Inventory(object):
         self.inventory = []
 
     def list_items(self):
+        """List all items within the current character's inventory."""
         if not self.inventory:
             print("Your inventory is empty")
         else:
@@ -37,10 +38,12 @@ class Inventory(object):
                     print("{0}\n".format(item.description))
 
     def add_item(self, item):
+        """Append an item to the current character's inventory."""
         if item:
             self.inventory.append(item)
 
     def remove_item(self, item):
+        """Remove an item from the current character's inventory."""
         if item in self.inventory:
             self.inventory.remove(item)
 

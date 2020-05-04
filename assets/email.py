@@ -5,7 +5,7 @@
 ##########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
-# Copyright (C) 2019 William Willis Whinn
+# Copyright (C) 2020 William Willis Whinn
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -54,7 +54,7 @@
 ###########
 
 class EMail(object):
-    """ This object represents an E-Mail message. """
+    """This object represents an E-Mail message."""
     name = ""
     description = ""
     sender = ""
@@ -74,7 +74,7 @@ class EMail(object):
         self.contents = contents
 
     def read(self):
-        """ Display the contents of the E-Mail. """
+        """Display the contents of the E-Mail."""
         print("SUBJECT: {0}".format(self.subject))
         print("FROM: {0}".format(self.sender))
         print("TO: {0}".format(self.recipient))
