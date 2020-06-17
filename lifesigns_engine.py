@@ -26,9 +26,6 @@
 # Imports #
 ###########
 
-from .colours import GREEN
-from .colours import COLOUR_RESET
-
 #############
 # Variables #
 #############
@@ -42,7 +39,7 @@ LIFESIGNS_URL = 'https://github.com/ultraviolet-1986/lifesigns_engine_python'
 
 def display_prompt():
     """Display the main Lifesigns Engine header."""
-    print("{0}Lifesigns Engine v{1} Copyright (C) 2020 William Whinn\n{2}{3}\n"
-          .format(GREEN, LIFESIGNS_VERSION, LIFESIGNS_URL, COLOUR_RESET))
+    print("Lifesigns Engine v{0} Copyright (C) 2020 William Whinn\n{1}\n"
+          .format(LIFESIGNS_VERSION, LIFESIGNS_URL))
 
 # End of File.

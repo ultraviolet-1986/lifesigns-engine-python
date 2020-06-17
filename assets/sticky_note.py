@@ -24,6 +24,9 @@
 # Imports #
 ###########
 
+from ..colours import BOLD
+from ..colours import GREEN
+from ..colours import RED
 from ..colours import YELLOW
 from ..colours import COLOUR_RESET
 
@@ -63,9 +66,13 @@ class StickyNote(object):
     def read(self):
         """Display the contents of the Sticky Note."""
         if self.legible:
-            print("{0}{1}{2}".format(YELLOW, self.contents, COLOUR_RESET))
+            print("> Item \"{0}\" reads:".format(self.name))
+            print("  {0}\"{1}\"{2}\n".format(YELLOW,
+                                           self.contents,
+                                           COLOUR_RESET))
         else:
-            print("The note is illegible and cannot be read.")
+            print("> {0}Item \"{1}\" is illegible and cannot be read.{2}\n"
+                  .format(RED, self.name, COLOUR_RESET))
 
     def damage(self):
         """Damage the Sticky Note."""
