@@ -46,7 +46,7 @@ from .colours import LIGHT_YELLOW
 
 from .colours import BLACK
 from .colours import GREY
-from .colours import GREY as GRAY
+from .colours import GRAY
 from .colours import WHITE
 
 from .colours import BOLD
