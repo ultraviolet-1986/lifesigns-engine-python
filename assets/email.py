@@ -63,8 +63,8 @@ class EMail(object):
     subject = ""
     contents = ""
 
-    def __init__(self, name, description, sender, recipient, datestamp, subject,
-                 contents):
+    def __init__(self, name, description, sender, recipient, datestamp,
+                 subject, contents):
         self.name = name
         self.description = description
         self.sender = sender

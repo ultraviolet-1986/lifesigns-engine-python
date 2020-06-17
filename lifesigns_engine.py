@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""This script will connect to others. Import for use in-game."""
+"""Display Lifesigns Engine metadata and main header."""
 
 ##########
 # Notice #
@@ -28,47 +28,21 @@
 
 # pylint: disable=unused-import
 
-###########
-# Imports #
-###########
-
-class Lifesigns():
-    def __init__():
-        # Documents
-        from assets.email import EMail
-        from assets.journal import Journal
-        from assets.sticky_note import StickyNote
-
-        # Keys
-        from assets.metal_key import MetalKey
-        from assets.programmable_keycard import ProgrammableKeycard
-
-        # Weapons
-        from assets.firearm import Firearm
-
-        # Containers
-        from assets.inventory import Inventory
-
 #############
 # Variables #
 #############
 
 LIFESIGNS_METADATA_VERSION = '0.0.1'
-LIFESIGNS_METADATA_URL = 'https://github.com/ultraviolet-1986/lifesigns-engine-python'
+LIFESIGNS_METADATA_URL = \
+    'https://github.com/ultraviolet-1986/lifesigns_engine_python'
 
 #############
 # Functions #
 #############
 
 def display_prompt():
-    """ Display the main Lifesigns Engine header """
-    print("Lifesigns Engine v{0} Copyright (C) 2020 William Whinn\n{1}\n".format(
-        LIFESIGNS_METADATA_VERSION, LIFESIGNS_METADATA_URL))
-
-#############
-# Kickstart #
-#############
-
-display_prompt()
+    """Display the main Lifesigns Engine header."""
+    print("Lifesigns Engine v{0} Copyright (C) 2020 William Whinn\n{1}\n"
+          .format(LIFESIGNS_METADATA_VERSION, LIFESIGNS_METADATA_URL))
 
 # End of File.

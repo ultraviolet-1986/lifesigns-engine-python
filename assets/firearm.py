@@ -53,7 +53,7 @@
 ###########
 
 class Firearm(object):
-    """This object represents a Firearm such as a Handgun or Rifle (etc.)"""
+    """This object represents a Firearm such as a Handgun or Rifle (etc)."""
     name = ""
     description = ""
     damage_potential = 0
@@ -99,9 +99,9 @@ class Firearm(object):
 
     def status(self):
         """Display the object's status."""
-        print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n".format(
-            self.name,
-            self.rounds_remaining,
-            self.clips_remaining))
+        print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n"
+              .format(self.name,
+                      self.rounds_remaining,
+                      self.clips_remaining))
 
 # End of File.
