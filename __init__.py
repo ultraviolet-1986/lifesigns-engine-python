@@ -1,3 +1,5 @@
+# Import game objects to top-level.
+
 from .assets import EMail
 from .assets import Firearm
 from .assets import Inventory

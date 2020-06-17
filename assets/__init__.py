@@ -1,4 +1,4 @@
-# Import game objects
+# Import game objects.
 
 from .email import EMail
 from .firearm import Firearm
