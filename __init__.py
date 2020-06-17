@@ -28,6 +28,32 @@
 
 from .lifesigns_engine import display_prompt
 
+# Colours and text formatting.
+
+from .colours import BLUE
+from .colours import CYAN
+from .colours import GREEN
+from .colours import MAGENTA
+from .colours import RED
+from .colours import YELLOW
+
+from .colours import LIGHT_BLUE
+from .colours import LIGHT_CYAN
+from .colours import LIGHT_GREEN
+from .colours import LIGHT_MAGENTA
+from .colours import LIGHT_RED
+from .colours import LIGHT_YELLOW
+
+from .colours import BLACK
+from .colours import GREY
+from .colours import GREY as GRAY
+from .colours import WHITE
+
+from .colours import BOLD
+from .colours import UNDERLINE
+
+from .colours import COLOUR_RESET
+
 # Lifesigns Engine assets.
 
 from .assets import EMail

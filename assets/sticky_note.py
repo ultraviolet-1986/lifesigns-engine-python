@@ -20,6 +20,13 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
+###########
+# Imports #
+###########
+
+from ..colours import YELLOW
+from ..colours import COLOUR_RESET
+
 #####################
 # Object Properties #
 #####################
@@ -56,7 +63,7 @@ class StickyNote(object):
     def read(self):
         """Display the contents of the Sticky Note."""
         if self.legible:
-            print(self.contents)
+            print("{0}{1}{2}".format(YELLOW, self.contents, COLOUR_RESET))
         else:
             print("The note is illegible and cannot be read.")
 

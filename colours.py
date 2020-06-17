@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Display Lifesigns Engine metadata and main header."""
+"""Colours for text formatting."""
 
 ##########
 # Notice #
@@ -22,27 +22,34 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
-###########
-# Imports #
-###########
-
-from .colours import GREEN
-from .colours import COLOUR_RESET
-
 #############
 # Variables #
 #############
 
-LIFESIGNS_VERSION = '0.0.1'
-LIFESIGNS_URL = 'https://github.com/ultraviolet-1986/lifesigns_engine_python'
+# String colours and formatting.
 
-#############
-# Functions #
-#############
+BLUE = '\033[0;34m'
+CYAN = '\033[0;36m'
+GREEN = '\033[0;32m'
+MAGENTA = '\033[0;35m'
+RED = '\033[0;31m'
+YELLOW = '\033[0;33m'
 
-def display_prompt():
-    """Display the main Lifesigns Engine header."""
-    print("{0}Lifesigns Engine v{1} Copyright (C) 2020 William Whinn\n{2}{3}\n"
-          .format(GREEN, LIFESIGNS_VERSION, LIFESIGNS_URL, COLOUR_RESET))
+LIGHT_BLUE = '\033[0;94m'
+LIGHT_CYAN = '\033[0;96m'
+LIGHT_GREEN = '\033[0;92m'
+LIGHT_MAGENTA = '\033[0;95m'
+LIGHT_RED = '\033[0;91m'
+LIGHT_YELLOW = '\033[0;93m'
+
+BLACK = '\033[0;30m'
+GREY = '\033[0;90m'
+GRAY = GREY
+WHITE = '\033[0;97m'
+
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+
+COLOUR_RESET = '\033[0;m'
 
 # End of File.
