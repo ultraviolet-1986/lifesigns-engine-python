@@ -26,9 +26,8 @@
 # Variables #
 #############
 
-LIFESIGNS_METADATA_VERSION = '0.0.1'
-LIFESIGNS_METADATA_URL = \
-    'https://github.com/ultraviolet-1986/lifesigns_engine_python'
+LIFESIGNS_VERSION = '0.0.1'
+LIFESIGNS_URL = 'https://github.com/ultraviolet-1986/lifesigns_engine_python'
 
 #############
 # Functions #
@@ -37,6 +36,6 @@ LIFESIGNS_METADATA_URL = \
 def display_prompt():
     """Display the main Lifesigns Engine header."""
     print("Lifesigns Engine v{0} Copyright (C) 2020 William Whinn\n{1}\n"
-          .format(LIFESIGNS_METADATA_VERSION, LIFESIGNS_METADATA_URL))
+          .format(LIFESIGNS_VERSION, LIFESIGNS_URL))
 
 # End of File.
