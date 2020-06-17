@@ -28,7 +28,7 @@
 import unittest
 
 # Game Assets
-from .programmable_keycard import ProgrammableKeycard
+from programmable_keycard import ProgrammableKeycard
 
 ###########
 # Objects #
