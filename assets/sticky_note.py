@@ -67,7 +67,7 @@ class StickyNote(object):
         """Display the contents of the Sticky Note."""
         if self.legible:
             print("> Item \"{0}\" reads:".format(self.name))
-            print("  {0}\"{1}\"{2}\n".format(YELLOW,
+            print("  {0}\"{1}\"{2}\n".format(BOLD,
                                            self.contents,
                                            COLOUR_RESET))
         else:
