@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-##########
-# Notice #
-##########
+###########
+# License #
+###########
 
 # Lifesigns Engine: A Python-based text adventure game engine.
 # Copyright (C) 2020 William Willis Whinn
 
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify it under the terms of the
+# GNU General Public License as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
 
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License along with this program. If
+# not, see <http://www.gnu.org/licenses/>.
 
 ##############
 # Directives #
@@ -62,8 +61,9 @@ class Firearm(object):
     clips_remaining = 0
     usable = True
 
-    def __init__(self, name, description, damage_potential, capacity,
-                 rounds_remaining, clips_remaining, usable):
+
+    def __init__(self, name, description, damage_potential, capacity, rounds_remaining,
+                 clips_remaining, usable):
         self.name = name
         self.description = description
         self.damage_potential = damage_potential
@@ -72,11 +72,12 @@ class Firearm(object):
         self.clips_remaining = clips_remaining
         self.usable = usable
 
+
     def add_clip(self):
         """Add another clip to the Inventory."""
         self.clips_remaining += 1
-        print("Your {0} now has {1} clip(s) remaining.\n".format(
-            self.name, self.clips_remaining))
+        print("Your {0} now has {1} clip(s) remaining.\n".format(self.name, self.clips_remaining))
+
 
     def fire_at(self, target):
         """Fire the weapon and deal damage to the target."""
@@ -85,6 +86,7 @@ class Firearm(object):
             target.remaining_health -= self.damage_potential
         else:
             print("Your {0} must be reloaded.\n".format(self.name))
+
 
     def reload(self):
         """Reload the weapon and remove a clip from the Inventory."""
@@ -97,11 +99,10 @@ class Firearm(object):
         else:
             print("You have no remaining ammunition.\n")
 
+
     def status(self):
         """Display the object's status."""
         print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n"
-              .format(self.name,
-                      self.rounds_remaining,
-                      self.clips_remaining))
+              .format(self.name, self.rounds_remaining, self.clips_remaining))
 
 # End of File.
