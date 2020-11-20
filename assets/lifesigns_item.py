@@ -26,13 +26,9 @@
 class LifesignsItem(object):
     """This object forms part of every in-game object."""
 
-    def __init__(self, name="", description=""):
+    def __init__(self, name="<unset>", description="<unset>"):
         self.__name = str(name)
         self.__description = str(description)
-
-
-    def __str__(self):
-        print(self.get_description(), "!?!")
 
 
     # PROPERTY MODIFIERS > GETTERS

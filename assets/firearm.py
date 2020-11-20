@@ -80,7 +80,6 @@ class Firearm(LifesignsItem):
     # STRING INTERPRETATION OF THE FIREARM OBJECT
     def __str__(self):
         """Display the object's status."""
-        super(Firearm).__str__()
 
         return ("Your {0} has {1} round(s) and {2} magazine(s) remaining.\n"
                 .format(self.name, self.rounds_remaining,
