@@ -8,16 +8,18 @@
 # Lifesigns Engine: A Python-based text adventure game engine.
 # Copyright (C) 2020 William Willis Whinn
 
-# This program is free software: you can redistribute it and/or modify it under the terms of the
-# GNU General Public License as published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or (at
+# your option) any later version.
 
-# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
-# even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 
-# You should have received a copy of the GNU General Public License along with this program. If
-# not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 ##############
 # Directives #
@@ -41,42 +43,56 @@
         This value holds the maximum bullet capacity of the object.
     - rounds_remaining (Integer)
         This value holds the number of bullets the object has remaining.
-    - clips_remaining (Integer)
-        This value shows how many clips the player has in their inventory.
+    - magazines_remaining (Integer)
+        This value shows how many magazines the player has in their inventory.
     - usable (Boolean)
         This determines whether or not the weapon can be used or fired.
 """
+
+from lifesigns_item import LifesignsItem
 
 ###########
 # Objects #
 ###########
 
-class Firearm(object):
+class Firearm(LifesignsItem):
     """This object represents a Firearm such as a Handgun or Rifle (etc)."""
-    name = ""
-    description = ""
-    damage_potential = 0
-    capacity = 0
-    rounds_remaining = 0
-    clips_remaining = 0
-    usable = True
 
 
-    def __init__(self, name, description, damage_potential, capacity, rounds_remaining,
-                 clips_remaining, usable):
+    def __init__(self, name, description, damage_potential=0, capacity=0,
+                 rounds_remaining=0, magazines_remaining=0, usable=True):
+
+        """Initialise the superclass and define the Firearm object."""
+
+        # INITIALISE SUPERCLASS
+        super().__init__()
+
+        # OBJECT PROPERTIES
         self.name = name
         self.description = description
         self.damage_potential = damage_potential
         self.capacity = capacity
         self.rounds_remaining = rounds_remaining
-        self.clips_remaining = clips_remaining
+        self.magazines_remaining = magazines_remaining
         self.usable = usable
 
 
-    def add_clip(self):
-        """Add another clip to the Inventory."""
-        self.clips_remaining += 1
-        print("Your {0} now has {1} clip(s) remaining.\n".format(self.name, self.clips_remaining))
+    # STRING INTERPRETATION OF THE FIREARM OBJECT
+    def __str__(self):
+        """Display the object's status."""
+        super(Firearm).__str__()
+
+        return ("Your {0} has {1} round(s) and {2} magazine(s) remaining.\n"
+                .format(self.name, self.rounds_remaining,
+                        self.magazines_remaining))
+
+
+    # OBJECT METHODS
+    def add_magazine(self):
+        """Add another magazine to the Inventory."""
+        self.magazines_remaining += 1
+        print("Your {0} now has {1} magazine(s) remaining.\n"
+              .format(super().get_name(), self.magazines_remaining))
 
 
     def fire_at(self, target):
@@ -89,20 +105,15 @@ class Firearm(object):
 
 
     def reload(self):
-        """Reload the weapon and remove a clip from the Inventory."""
-        if self.clips_remaining > 0:
-            self.clips_remaining -= 1
+        """Reload the weapon and remove a magazine from the Inventory."""
+        if self.magazines_remaining > 0:
+            self.magazines_remaining -= 1
             self.rounds_remaining = self.capacity
-            self.status()
+            print(self)
         elif self.rounds_remaining > 0:
-            self.status()
+            print(self)
         else:
             print("You have no remaining ammunition.\n")
 
-
-    def status(self):
-        """Display the object's status."""
-        print("Your {0} has {1} round(s) and {2} clip(s) remaining.\n"
-              .format(self.name, self.rounds_remaining, self.clips_remaining))
 
 # End of File.
